@@ -2,6 +2,7 @@
 server:
   port: 8081
 # 默认设置
+# 密码不要设置全是0的数字,会有登录问题
 camunda:
   bpm:
     admin-user:
@@ -14,6 +15,8 @@ camunda:
     database:
       type: mysql
 # 数据库
+# nullDatabaseMeansCurrent=true可以在库中自动生成对应数据表
+# 密码不要设置全是0的数字,会有连接问题
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
